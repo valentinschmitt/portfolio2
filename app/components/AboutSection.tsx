@@ -3,6 +3,17 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useLocale } from '../hooks/useLocale';
+import type { Dictionary } from '../i18n/types';
+
+const defaultText: Dictionary['about'] = {
+  title: 'Valentin Schmitt : Web Expert in Nancy since 10 years',
+  intro: 'Hi, I\'m Valentin Schmitt, a creative developer passionate about building immersive digital experiences that push the boundaries of web technology.',
+  background: 'With a background in both design and development, I specialize in creating interactive websites and digital experiences that combine aesthetic beauty with technical excellence.',
+  passion: 'I love experimenting with new technologies and finding innovative ways to bring creative visions to life on the web.',
+  skillsTitle: 'Skills & Technologies',
+  ctaTitle: 'Let\'s Create Something Amazing',
+  ctaButton: 'Get in Touch'
+};
 
 export default function AboutSection() {
   const { dictionary, isLoading } = useLocale();
@@ -13,7 +24,11 @@ export default function AboutSection() {
     'Creative Development', 'UI/UX Design'
   ];
 
-  if (isLoading) return null;
+  const text = dictionary?.about || defaultText;
+
+  if (isLoading) {
+    return <div className="py-20 px-4 bg-black/50">Loading...</div>;
+  }
 
   return (
     <section id="about" className="py-20 px-4 bg-black/50">
@@ -25,7 +40,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold mb-12 text-center"
         >
-          {dictionary.about.title}
+          {text.title}
         </motion.h1>
 
         <motion.div
@@ -55,9 +70,9 @@ export default function AboutSection() {
             </motion.div>
 
             <div className="space-y-4 text-gray-300">
-              <p>{dictionary.about.intro}</p>
-              <p>{dictionary.about.background}</p>
-              <p>{dictionary.about.passion}</p>
+              <p>{text.intro}</p>
+              <p>{text.background}</p>
+              <p>{text.passion}</p>
             </div>
           </div>
 
@@ -68,7 +83,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="bg-white/5 backdrop-blur-lg rounded-2xl p-8"
           >
-            <h3 className="text-2xl font-bold mb-6">{dictionary.about.skillsTitle}</h3>
+            <h3 className="text-2xl font-bold mb-6">{text.skillsTitle}</h3>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill, index) => (
                 <motion.span
@@ -97,12 +112,12 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <h3 className="text-2xl font-bold mb-6">{dictionary.about.ctaTitle}</h3>
+          <h3 className="text-2xl font-bold mb-6">{text.ctaTitle}</h3>
           <a
             href="#contact"
             className="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium hover:opacity-90 transition-opacity"
           >
-            {dictionary.about.ctaButton}
+            {text.ctaButton}
           </a>
         </motion.div>
       </div>
