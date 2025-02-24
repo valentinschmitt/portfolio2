@@ -1,7 +1,7 @@
 import type { Dictionary } from './types';
 import { defaultLocale, type ValidLocale } from './config';
 
-let cachedDictionaries: Partial<Record<ValidLocale, Dictionary>> = {};
+const cachedDictionaries: Partial<Record<ValidLocale, Dictionary>> = {};
 
 export const getClientDictionary = async (locale: ValidLocale = defaultLocale): Promise<Dictionary> => {
   // If we have a cached version, return it

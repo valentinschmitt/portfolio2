@@ -33,7 +33,7 @@ export default function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind? Let's work together to create something amazing.
+            Have a project in mind? Let&apos;s work together to create something amazing.
           </p>
         </motion.div>
 
