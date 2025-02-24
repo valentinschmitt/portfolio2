@@ -1,0 +1,37 @@
+{
+  "navigation": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Creative Developer & Digital Artist",
+    "viewWork": "View Work",
+    "contactMe": "Contact Me",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "about": {
+    "title": "Valentin Schmitt : Web Expert in Nancy since 10 years",
+    "intro": "Hi, I'm Valentin Schmitt, a creative developer passionate about building immersive digital experiences that push the boundaries of web technology.",
+    "background": "With a background in both design and development, I specialize in creating interactive websites and digital experiences that combine aesthetic beauty with technical excellence.",
+    "passion": "I love experimenting with new technologies and finding innovative ways to bring creative visions to life on the web.",
+    "skillsTitle": "Skills & Technologies",
+    "ctaTitle": "Let's Create Something Amazing",
+    "ctaButton": "Get in Touch"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind? Let's work together to create something amazing.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "directContact": "Or reach out directly"
+  },
+  "cta": {
+    "audit": "🚀 Get a FREE Web Presence AI Audit for Your Business",
+    "claim": "Claim Now"
+  }
+} 

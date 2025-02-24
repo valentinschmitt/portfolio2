@@ -3,19 +3,63 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+  cursor: default;
+}
+
+.smooth-scroll {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600;
+}
+
+.hover-effect {
+  @apply transition-transform duration-300 ease-in-out hover:scale-105;
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  @apply fixed pointer-events-none z-50 mix-blend-difference;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.2s ease-out;
+}
+
+/* Project card styles */
+.project-card {
+  @apply relative overflow-hidden rounded-lg;
+  height: 400px;
+}
+
+.project-card img {
+  @apply transition-transform duration-500 ease-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Animation classes */
+.fade-up {
+  @apply opacity-0 translate-y-8 transition-all duration-700;
+}
+
+.fade-up.in-view {
+  @apply opacity-100 translate-y-0;
 }

@@ -1,0 +1,37 @@
+{
+  "navigation": {
+    "work": "Projets",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Développeur Créatif & Artiste Digital",
+    "viewWork": "Voir mes projets",
+    "contactMe": "Me contacter",
+    "scrollToExplore": "Défiler pour explorer"
+  },
+  "about": {
+    "title": "Valentin Schmitt : Expert Web à Nancy depuis 10 ans",
+    "intro": "Bonjour, je suis Valentin Schmitt, un développeur créatif passionné par la création d'expériences digitales immersives qui repoussent les limites de la technologie web.",
+    "background": "Fort d'une expertise en design et en développement, je me spécialise dans la création de sites web interactifs et d'expériences digitales qui allient beauté esthétique et excellence technique.",
+    "passion": "J'aime expérimenter avec les nouvelles technologies et trouver des moyens innovants de donner vie aux visions créatives sur le web.",
+    "skillsTitle": "Compétences & Technologies",
+    "ctaTitle": "Créons Quelque Chose d'Extraordinaire",
+    "ctaButton": "Me contacter"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Vous avez un projet en tête ? Travaillons ensemble pour créer quelque chose d'extraordinaire.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer le message"
+    },
+    "directContact": "Ou contactez-moi directement"
+  },
+  "cta": {
+    "audit": "🚀 Obtenez un audit GRATUIT de votre présence web par IA",
+    "claim": "Demander maintenant"
+  }
+} 
